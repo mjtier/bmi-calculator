@@ -21,10 +21,10 @@ class MainActivity : AppCompatActivity() {
         binding.mainView.btCalculate.setOnClickListener {
             val h = binding.mainView.etHeight.text.toString().toDouble()
             val w = binding.mainView.etWeight.text.toString().toDouble()
-            val bmi = vm.calculateBMI(h, w, MeasurementSystem.IMPERIAL)
-            val rounded_bmi_string = String.format("%.1f", bmi)
+            val bmi : Double = vm.calculateBMI(h, w, MeasurementSystem.IMPERIAL)
+            val roundedBmiString = String.format("%.1f", bmi)
             // Show calculated BMI Value on Screen
-            binding.mainView.tvBmi.text = rounded_bmi_string
+            binding.mainView.tvBmi.text = roundedBmiString
         }
 
     }
